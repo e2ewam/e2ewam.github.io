@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="164" viewBox="0 0 400 164" role="img" aria-labelledby="title desc" font-family="Arial, Helvetica, sans-serif">
+<title id="title">Visual supervision objectives</title>
+<desc id="desc">The two visual objective families are self-supervised learning and future prediction.</desc>
+<defs><marker id="arrow-245E9A" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="5" markerHeight="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#245E9A"/></marker></defs>
+<rect x="56" y="27" width="82" height="77" rx="5" fill="white" stroke="#89939E" stroke-width="1.8"/>
+<path d="M83 28 V104 M111 28 V104 M56 52 H138 M56 78 H138" fill="none" stroke="#B7BEC7" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="83" y="52" width="28" height="26" rx="0" fill="#E1E7EF" stroke="#B7BEC7" stroke-width="1.8"/>
+<rect x="111" y="78" width="27" height="26" rx="0" fill="#E1E7EF" stroke="#B7BEC7" stroke-width="1.8"/>
+<text x="97" y="139" text-anchor="middle" font-size="21" font-weight="normal" fill="#17191D">Self-supervised</text>
+<path d="M199 23 V143" fill="none" stroke="#E4E7EC" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="229" y="31" width="55" height="69" rx="5" fill="white" stroke="#89939E" stroke-width="1.8"/>
+<path d="M290 65 H321" fill="none" stroke="#245E9A" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-245E9A)"/>
+<rect x="333" y="31" width="55" height="69" rx="5" fill="white" stroke="#789CBD" stroke-width="1.8"/>
+<rect x="325" y="39" width="55" height="61" rx="5" fill="white" stroke="#245E9A" stroke-width="1.8"/>
+<text x="300" y="139" text-anchor="middle" font-size="21" font-weight="normal" fill="#17191D">Future prediction</text>
+</svg>

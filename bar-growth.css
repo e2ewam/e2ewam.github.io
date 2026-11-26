@@ -1,0 +1,33 @@
+@media (prefers-reduced-motion: no-preference) {
+  [data-bar-growth] :is(.encoder-bar, .ir-data-bar, .recipe-plot-bar) {
+    transform-box: fill-box;
+    transform-origin: center bottom;
+  }
+
+  .ir-paper-bar { transform-origin: center bottom; }
+
+  [data-bar-growth="waiting"] :is(.encoder-bar, .ir-data-bar, .recipe-plot-bar),
+  .ir-paper-chart:has([data-real-robot-plot="ID"][data-bar-growth="waiting"]) .ir-paper-bar[data-domain="ID"],
+  .ir-paper-chart:has([data-real-robot-plot="OOD"][data-bar-growth="waiting"]) .ir-paper-bar[data-domain="OOD"] {
+    transform: scaleY(0);
+  }
+  [data-bar-growth="waiting"] :is(.encoder-value, .ir-data-value, .recipe-plot-value) { opacity: 0; }
+
+  [data-bar-growth="playing"] :is(.encoder-bar, .ir-data-bar, .recipe-plot-bar),
+  .ir-paper-chart:has([data-real-robot-plot="ID"][data-bar-growth="playing"]) .ir-paper-bar[data-domain="ID"],
+  .ir-paper-chart:has([data-real-robot-plot="OOD"][data-bar-growth="playing"]) .ir-paper-bar[data-domain="OOD"] {
+    animation: grow-vertical-bar .62s cubic-bezier(.2, .74, .32, 1) both;
+  }
+  [data-bar-growth="playing"] :is(.encoder-value, .ir-data-value, .recipe-plot-value) {
+    animation: show-bar-value .20s ease-out .42s both;
+  }
+
+  @keyframes grow-vertical-bar {
+    from { transform: scaleY(0); }
+    to { transform: scaleY(1); }
+  }
+  @keyframes show-bar-value {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}

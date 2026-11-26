@@ -1,0 +1,1293 @@
+{
+  "schema_version": 2,
+  "scope": "Local website layout preview; no deployment",
+  "metric": "Success rate (%)",
+  "sorting": "Simulation panels descend independently by success rate; manuscript order breaks equal-score ties. Rank uses competition ranking. Real-robot panels use fixed order: E2EWAM, OpenWAM-α, π₀.₅.",
+  "simulation": [
+    {
+      "id": "simulation-robotwin-clean",
+      "benchmark": "RoboTwin 2.0",
+      "protocol": "Clean → Clean",
+      "source_table": 5,
+      "source_page": 16,
+      "baseline_count": 15,
+      "unreported_methods": [],
+      "methods": [
+        {
+          "method": "InternW0-Δ",
+          "success_rate": 90.0,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 1
+        },
+        {
+          "method": "ME-DEX1.0",
+          "success_rate": 89.58,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 2
+        },
+        {
+          "method": "OpenWAM-α",
+          "success_rate": 89.4,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 3
+        },
+        {
+          "method": "WorldScape Policy 2.0",
+          "success_rate": 84.92,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 4
+        },
+        {
+          "method": "Qwen-RobotManip Context",
+          "success_rate": 84.7,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 5
+        },
+        {
+          "method": "E2EWAM",
+          "success_rate": 83.06,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 6
+        },
+        {
+          "method": "4D-WAM",
+          "success_rate": 81.5,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 7
+        },
+        {
+          "method": "LingBot-VA",
+          "success_rate": 80.7,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 8
+        },
+        {
+          "method": "Spatial Forcing",
+          "success_rate": 77.18,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 9
+        },
+        {
+          "method": "π₀.₅",
+          "success_rate": 70.66,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 10
+        },
+        {
+          "method": "X-WAM",
+          "success_rate": 69.98,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 11
+        },
+        {
+          "method": "X-VLA",
+          "success_rate": 67.96,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 12
+        },
+        {
+          "method": "GigaBrain-0.7 (S1)",
+          "success_rate": 66.8,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 13
+        },
+        {
+          "method": "AHA-WAM",
+          "success_rate": 64.32,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 14
+        },
+        {
+          "method": "Xiaomi-Robotics-0",
+          "success_rate": 62.86,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 15
+        },
+        {
+          "method": "ABot-M0",
+          "success_rate": 57.4,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 16
+        }
+      ],
+      "model_order": [
+        "InternW0-Δ",
+        "ME-DEX1.0",
+        "OpenWAM-α",
+        "WorldScape Policy 2.0",
+        "Qwen-RobotManip Context",
+        "E2EWAM",
+        "4D-WAM",
+        "LingBot-VA",
+        "Spatial Forcing",
+        "π₀.₅",
+        "X-WAM",
+        "X-VLA",
+        "GigaBrain-0.7 (S1)",
+        "AHA-WAM",
+        "Xiaomi-Robotics-0",
+        "ABot-M0"
+      ],
+      "values": [
+        90.0,
+        89.58,
+        89.4,
+        84.92,
+        84.7,
+        83.06,
+        81.5,
+        80.7,
+        77.18,
+        70.66,
+        69.98,
+        67.96,
+        66.8,
+        64.32,
+        62.86,
+        57.4
+      ],
+      "displayed_methods": [
+        "InternW0-Δ",
+        "ME-DEX1.0",
+        "OpenWAM-α",
+        "WorldScape Policy 2.0",
+        "Qwen-RobotManip Context",
+        "E2EWAM",
+        "π₀.₅"
+      ],
+      "displayed_values": [
+        90.0,
+        89.58,
+        89.4,
+        84.92,
+        84.7,
+        83.06,
+        70.66
+      ],
+      "displayed_count": 7
+    },
+    {
+      "id": "simulation-robotwin-random",
+      "benchmark": "RoboTwin 2.0",
+      "protocol": "Clean → Random",
+      "source_table": 5,
+      "source_page": 16,
+      "baseline_count": 15,
+      "unreported_methods": [],
+      "methods": [
+        {
+          "method": "InternW0-Δ",
+          "success_rate": 71.9,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 1
+        },
+        {
+          "method": "Qwen-RobotManip Context",
+          "success_rate": 69.4,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 2
+        },
+        {
+          "method": "ME-DEX1.0",
+          "success_rate": 68.12,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 3
+        },
+        {
+          "method": "GigaBrain-0.7 (S1)",
+          "success_rate": 67.92,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 4
+        },
+        {
+          "method": "E2EWAM",
+          "success_rate": 56.78,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 5
+        },
+        {
+          "method": "OpenWAM-α",
+          "success_rate": 48.7,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 6
+        },
+        {
+          "method": "π₀.₅",
+          "success_rate": 46.0,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 7
+        },
+        {
+          "method": "4D-WAM",
+          "success_rate": 41.8,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 8
+        },
+        {
+          "method": "WorldScape Policy 2.0",
+          "success_rate": 38.5,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 9
+        },
+        {
+          "method": "LingBot-VA",
+          "success_rate": 34.6,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 10
+        },
+        {
+          "method": "ABot-M0",
+          "success_rate": 30.36,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 11
+        },
+        {
+          "method": "Spatial Forcing",
+          "success_rate": 26.74,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 12
+        },
+        {
+          "method": "X-WAM",
+          "success_rate": 25.84,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 13
+        },
+        {
+          "method": "X-VLA",
+          "success_rate": 20.95,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 14
+        },
+        {
+          "method": "Xiaomi-Robotics-0",
+          "success_rate": 18.22,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 15
+        },
+        {
+          "method": "AHA-WAM",
+          "success_rate": 3.2,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 5, page 16; verified in Overleaf 2026-11-11",
+          "rank": 16
+        }
+      ],
+      "model_order": [
+        "InternW0-Δ",
+        "Qwen-RobotManip Context",
+        "ME-DEX1.0",
+        "GigaBrain-0.7 (S1)",
+        "E2EWAM",
+        "OpenWAM-α",
+        "π₀.₅",
+        "4D-WAM",
+        "WorldScape Policy 2.0",
+        "LingBot-VA",
+        "ABot-M0",
+        "Spatial Forcing",
+        "X-WAM",
+        "X-VLA",
+        "Xiaomi-Robotics-0",
+        "AHA-WAM"
+      ],
+      "values": [
+        71.9,
+        69.4,
+        68.12,
+        67.92,
+        56.78,
+        48.7,
+        46.0,
+        41.8,
+        38.5,
+        34.6,
+        30.36,
+        26.74,
+        25.84,
+        20.95,
+        18.22,
+        3.2
+      ],
+      "displayed_methods": [
+        "InternW0-Δ",
+        "Qwen-RobotManip Context",
+        "ME-DEX1.0",
+        "E2EWAM",
+        "OpenWAM-α",
+        "π₀.₅",
+        "WorldScape Policy 2.0"
+      ],
+      "displayed_values": [
+        71.9,
+        69.4,
+        68.12,
+        56.78,
+        48.7,
+        46.0,
+        38.5
+      ],
+      "displayed_count": 7
+    },
+    {
+      "id": "simulation-libero-original",
+      "benchmark": "LIBERO",
+      "protocol": "Original → Original",
+      "source_table": 4,
+      "source_page": 16,
+      "baseline_count": 17,
+      "unreported_methods": [
+        "InternW0-Δ"
+      ],
+      "methods": [
+        {
+          "method": "OpenWAM-α",
+          "success_rate": 99.3,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 1
+        },
+        {
+          "method": "Qwen-RobotManip Context",
+          "success_rate": 99.2,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 2
+        },
+        {
+          "method": "Being-H0.7",
+          "success_rate": 99.2,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 2
+        },
+        {
+          "method": "ABot-M0",
+          "success_rate": 98.6,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 4
+        },
+        {
+          "method": "Cosmos Policy",
+          "success_rate": 98.5,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 5
+        },
+        {
+          "method": "E2EWAM",
+          "success_rate": 98.35,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 6
+        },
+        {
+          "method": "Faster-WAM (DoT)",
+          "success_rate": 98.3,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 7
+        },
+        {
+          "method": "AVA-VLA",
+          "success_rate": 98.2,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 8
+        },
+        {
+          "method": "X-VLA",
+          "success_rate": 98.1,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 9
+        },
+        {
+          "method": "Fast-WAM",
+          "success_rate": 97.6,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 10
+        },
+        {
+          "method": "RIPT-VLA",
+          "success_rate": 97.5,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 11
+        },
+        {
+          "method": "VLA-JEPA",
+          "success_rate": 97.2,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 12
+        },
+        {
+          "method": "OpenVLA-OFT",
+          "success_rate": 97.1,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 13
+        },
+        {
+          "method": "π₀.₅",
+          "success_rate": 96.85,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 14
+        },
+        {
+          "method": "GE-Act",
+          "success_rate": 94.4,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 15
+        },
+        {
+          "method": "π₀",
+          "success_rate": 94.15,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 16
+        },
+        {
+          "method": "π₀-FAST",
+          "success_rate": 85.5,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 17
+        },
+        {
+          "method": "WorldVLA",
+          "success_rate": 79.1,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 18
+        }
+      ],
+      "model_order": [
+        "OpenWAM-α",
+        "Qwen-RobotManip Context",
+        "Being-H0.7",
+        "ABot-M0",
+        "Cosmos Policy",
+        "E2EWAM",
+        "Faster-WAM (DoT)",
+        "AVA-VLA",
+        "X-VLA",
+        "Fast-WAM",
+        "RIPT-VLA",
+        "VLA-JEPA",
+        "OpenVLA-OFT",
+        "π₀.₅",
+        "GE-Act",
+        "π₀",
+        "π₀-FAST",
+        "WorldVLA"
+      ],
+      "values": [
+        99.3,
+        99.2,
+        99.2,
+        98.6,
+        98.5,
+        98.35,
+        98.3,
+        98.2,
+        98.1,
+        97.6,
+        97.5,
+        97.2,
+        97.1,
+        96.85,
+        94.4,
+        94.15,
+        85.5,
+        79.1
+      ],
+      "displayed_methods": [
+        "OpenWAM-α",
+        "Qwen-RobotManip Context",
+        "Being-H0.7",
+        "ABot-M0",
+        "E2EWAM",
+        "π₀.₅"
+      ],
+      "displayed_values": [
+        99.3,
+        99.2,
+        99.2,
+        98.6,
+        98.35,
+        96.85
+      ],
+      "displayed_count": 6
+    },
+    {
+      "id": "simulation-libero-random",
+      "benchmark": "LIBERO-Plus",
+      "protocol": "Original → Plus",
+      "source_table": 4,
+      "source_page": 16,
+      "baseline_count": 18,
+      "unreported_methods": [],
+      "methods": [
+        {
+          "method": "InternW0-Δ",
+          "success_rate": 92.8,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 1
+        },
+        {
+          "method": "Qwen-RobotManip Context",
+          "success_rate": 91.4,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 2
+        },
+        {
+          "method": "E2EWAM",
+          "success_rate": 84.46,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 3
+        },
+        {
+          "method": "π₀.₅",
+          "success_rate": 84.4,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 4
+        },
+        {
+          "method": "Cosmos Policy",
+          "success_rate": 82.2,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 5
+        },
+        {
+          "method": "Being-H0.7",
+          "success_rate": 82.1,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 6
+        },
+        {
+          "method": "ABot-M0",
+          "success_rate": 80.5,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 7
+        },
+        {
+          "method": "GE-Act",
+          "success_rate": 80.3,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 8
+        },
+        {
+          "method": "Faster-WAM (DoT)",
+          "success_rate": 78.3,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 9
+        },
+        {
+          "method": "VLA-JEPA",
+          "success_rate": 77.9,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 10
+        },
+        {
+          "method": "AVA-VLA",
+          "success_rate": 74.7,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 11
+        },
+        {
+          "method": "X-VLA",
+          "success_rate": 71.4,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 12
+        },
+        {
+          "method": "OpenVLA-OFT",
+          "success_rate": 69.6,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 13
+        },
+        {
+          "method": "OpenWAM-α",
+          "success_rate": 69.2,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 14
+        },
+        {
+          "method": "RIPT-VLA",
+          "success_rate": 68.4,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 15
+        },
+        {
+          "method": "π₀-FAST",
+          "success_rate": 61.6,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 16
+        },
+        {
+          "method": "π₀",
+          "success_rate": 53.6,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 17
+        },
+        {
+          "method": "Fast-WAM",
+          "success_rate": 51.5,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 18
+        },
+        {
+          "method": "WorldVLA",
+          "success_rate": 25.0,
+          "reported_uncertainty": null,
+          "source": "JEPA_Manipulation-11.pdf, Table 4, page 16; verified in Overleaf 2026-11-11",
+          "rank": 19
+        }
+      ],
+      "model_order": [
+        "InternW0-Δ",
+        "Qwen-RobotManip Context",
+        "E2EWAM",
+        "π₀.₅",
+        "Cosmos Policy",
+        "Being-H0.7",
+        "ABot-M0",
+        "GE-Act",
+        "Faster-WAM (DoT)",
+        "VLA-JEPA",
+        "AVA-VLA",
+        "X-VLA",
+        "OpenVLA-OFT",
+        "OpenWAM-α",
+        "RIPT-VLA",
+        "π₀-FAST",
+        "π₀",
+        "Fast-WAM",
+        "WorldVLA"
+      ],
+      "values": [
+        92.8,
+        91.4,
+        84.46,
+        84.4,
+        82.2,
+        82.1,
+        80.5,
+        80.3,
+        78.3,
+        77.9,
+        74.7,
+        71.4,
+        69.6,
+        69.2,
+        68.4,
+        61.6,
+        53.6,
+        51.5,
+        25.0
+      ],
+      "displayed_methods": [
+        "InternW0-Δ",
+        "Qwen-RobotManip Context",
+        "E2EWAM",
+        "π₀.₅",
+        "Being-H0.7",
+        "ABot-M0",
+        "OpenWAM-α"
+      ],
+      "displayed_values": [
+        92.8,
+        91.4,
+        84.46,
+        84.4,
+        82.1,
+        80.5,
+        69.2
+      ],
+      "displayed_count": 7
+    }
+  ],
+  "simulation_web_selection": {
+    "selection_rule": "For each benchmark, take the union of methods ranked at most fourth in either evaluation protocol, then include π₀.₅ and E2EWAM. Sort each displayed panel by its own success rate. The RoboTwin preview keeps its seven selected comparisons after the website exclusion.",
+    "full_source_retained": true,
+    "label_abbreviations": {
+      "E2EWAM": "E2E\nWAM",
+      "Qwen-RobotManip Context": "Qwen\nContext",
+      "WorldScape Policy 2.0": "World\nScape\n2.0",
+      "GigaBrain-0.7 (S1)": "GigaBrain\nS1",
+      "OpenWAM-α": "Open\nWAM-α",
+      "Cosmos Policy": "Cosmos\nPolicy",
+      "4D-WAM": "4D-\nWAM",
+      "Being-H0.7": "Being-\nH0.7",
+      "ABot-M0": "ABot-\nM0",
+      "ME-DEX1.0": "ME-DEX\n1.0",
+      "InternW0-Δ": "Intern\nW0-Δ"
+    },
+    "presentation": "Selected web comparisons use horizontal method labels, 0/50/100 ticks, equal-weight text and no rank labels, visible footnotes or bar outlines."
+  },
+  "simulation_original_order": {
+    "RoboTwin 2.0": [
+      "π₀.₅",
+      "X-VLA",
+      "ABot-M0",
+      "Spatial Forcing",
+      "GigaBrain-0.7 (S1)",
+      "Qwen-RobotManip Context",
+      "Xiaomi-Robotics-0",
+      "OpenWAM-α",
+      "LingBot-VA",
+      "4D-WAM",
+      "X-WAM",
+      "WorldScape Policy 2.0",
+      "AHA-WAM",
+      "ME-DEX1.0",
+      "InternW0-Δ",
+      "E2EWAM"
+    ],
+    "LIBERO / LIBERO-Plus": [
+      "π₀",
+      "π₀-FAST",
+      "π₀.₅",
+      "OpenVLA-OFT",
+      "RIPT-VLA",
+      "X-VLA",
+      "VLA-JEPA",
+      "AVA-VLA",
+      "ABot-M0",
+      "Qwen-RobotManip Context",
+      "WorldVLA",
+      "Cosmos Policy",
+      "Fast-WAM",
+      "Faster-WAM (DoT)",
+      "GE-Act",
+      "Being-H0.7",
+      "OpenWAM-α",
+      "InternW0-Δ",
+      "E2EWAM"
+    ]
+  },
+  "simulation_provenance": {
+    "baselines": {
+      "source": "/Users/tetomikuase/Documents/ChatGPT/probe PCA sensitivity/output/real_robot_sync_20261111/JEPA_Manipulation-11.pdf",
+      "table_mapping": {
+        "LIBERO / LIBERO-Plus": {
+          "table": 4,
+          "page": 16
+        },
+        "RoboTwin 2.0": {
+          "table": 5,
+          "page": 16
+        }
+      },
+      "coverage": "The interactive charts plot the reported values for the website comparison set.",
+      "verified_online": "https://www.overleaf.com/project/6ac78a5c5785109c4354b65e",
+      "verified_date": "2026-11-11",
+      "note": "Reported literature values, not reruns with a common training budget. Qwen uses Context; GigaBrain uses S1."
+    },
+    "ours": {
+      "source": "User values: RoboTwin updated 2026-11-09; LIBERO confirmed 2026-11-02",
+      "values": {
+        "RoboTwin Clean": 83.06,
+        "RoboTwin Random": 56.78,
+        "LIBERO Original": 98.35,
+        "LIBERO-Plus": 84.46
+      }
+    },
+    "protocol_confirmation": "The user confirmed LIBERO Original→Random 84.46 is LIBERO-Plus on 2026-11-02.",
+    "uncertainty": "The current manuscript simulation tables do not report uncertainty. No error bars are inferred."
+  },
+  "real_robot": {
+    "ID": {
+      "capabilities": [
+        "Deformable",
+        "Recognition",
+        "Dynamic",
+        "Long-horizon",
+        "Precision"
+      ],
+      "tasks": [
+        "Clothes Folding",
+        "Waste Sorting",
+        "Rotating Hanoi Stacking",
+        "Iced Tea Making",
+        "USB Insertion"
+      ],
+      "models": {
+        "π₀.₅": {
+          "success_rate": [
+            50.0,
+            55.0,
+            50.0,
+            50.0,
+            45.0
+          ],
+          "progress_score": [
+            61.7,
+            80.0,
+            65.0,
+            83.33333333333334,
+            72.5
+          ],
+          "macro_success_rate": 50.0,
+          "macro_progress_score": 72.50666666666666
+        },
+        "OpenWAM-α": {
+          "success_rate": [
+            50.0,
+            35.0,
+            65.0,
+            60.0,
+            75.0
+          ],
+          "progress_score": [
+            66.7,
+            70.0,
+            75.0,
+            83.33333333333334,
+            87.5
+          ],
+          "macro_success_rate": 57.0,
+          "macro_progress_score": 76.50666666666666
+        },
+        "E2EWAM": {
+          "success_rate": [
+            75.0,
+            70.0,
+            85.0,
+            60.0,
+            80.0
+          ],
+          "progress_score": [
+            81.7,
+            90.0,
+            90.0,
+            90.83333333333333,
+            90.0
+          ],
+          "macro_success_rate": 74.0,
+          "macro_progress_score": 88.50666666666666
+        }
+      },
+      "model_order_by_capability": [
+        [
+          "E2EWAM",
+          "OpenWAM-α",
+          "π₀.₅"
+        ],
+        [
+          "E2EWAM",
+          "OpenWAM-α",
+          "π₀.₅"
+        ],
+        [
+          "E2EWAM",
+          "OpenWAM-α",
+          "π₀.₅"
+        ],
+        [
+          "E2EWAM",
+          "OpenWAM-α",
+          "π₀.₅"
+        ],
+        [
+          "E2EWAM",
+          "OpenWAM-α",
+          "π₀.₅"
+        ]
+      ]
+    },
+    "OOD": {
+      "capabilities": [
+        "Deformable",
+        "Recognition",
+        "Dynamic",
+        "Long-horizon",
+        "Precision"
+      ],
+      "tasks": [
+        "Clothes Folding",
+        "Waste Sorting",
+        "Rotating Hanoi Stacking",
+        "Iced Tea Making",
+        "USB Insertion"
+      ],
+      "models": {
+        "π₀.₅": {
+          "success_rate": [
+            46.666666666666664,
+            20.0,
+            30.0,
+            5.0,
+            35.0
+          ],
+          "progress_score": [
+            56.70000000000001,
+            63.3,
+            53.333333333333336,
+            56.666666666666664,
+            62.5
+          ],
+          "macro_success_rate": 27.333333333333332,
+          "macro_progress_score": 58.5
+        },
+        "OpenWAM-α": {
+          "success_rate": [
+            28.333333333333332,
+            10.0,
+            25.0,
+            5.0,
+            40.0
+          ],
+          "progress_score": [
+            40.53333333333333,
+            51.7,
+            50.0,
+            29.166666666666668,
+            70.0
+          ],
+          "macro_success_rate": 21.666666666666664,
+          "macro_progress_score": 48.28
+        },
+        "E2EWAM": {
+          "success_rate": [
+            63.333333333333336,
+            45.0,
+            45.0,
+            15.0,
+            55.0
+          ],
+          "progress_score": [
+            71.66666666666667,
+            75.0,
+            63.333333333333336,
+            61.66666666666667,
+            77.5
+          ],
+          "macro_success_rate": 44.66666666666667,
+          "macro_progress_score": 69.83333333333334
+        }
+      },
+      "model_order_by_capability": [
+        [
+          "E2EWAM",
+          "OpenWAM-α",
+          "π₀.₅"
+        ],
+        [
+          "E2EWAM",
+          "OpenWAM-α",
+          "π₀.₅"
+        ],
+        [
+          "E2EWAM",
+          "OpenWAM-α",
+          "π₀.₅"
+        ],
+        [
+          "E2EWAM",
+          "OpenWAM-α",
+          "π₀.₅"
+        ],
+        [
+          "E2EWAM",
+          "OpenWAM-α",
+          "π₀.₅"
+        ]
+      ]
+    }
+  },
+  "real_robot_raw": {
+    "columns": [
+      "success_rate",
+      "progress_score"
+    ],
+    "task_conditions": [
+      {
+        "task": "Clothes Folding",
+        "condition": "ID"
+      },
+      {
+        "task": "Clothes Folding",
+        "condition": "Object OOD"
+      },
+      {
+        "task": "Clothes Folding",
+        "condition": "Background OOD"
+      },
+      {
+        "task": "Clothes Folding",
+        "condition": "Object + background OOD"
+      },
+      {
+        "task": "Waste Sorting",
+        "condition": "ID"
+      },
+      {
+        "task": "Waste Sorting",
+        "condition": "Object OOD"
+      },
+      {
+        "task": "Rotating Hanoi Stacking",
+        "condition": "ID"
+      },
+      {
+        "task": "Rotating Hanoi Stacking",
+        "condition": "Velocity OOD"
+      },
+      {
+        "task": "Iced Tea Making",
+        "condition": "ID"
+      },
+      {
+        "task": "Iced Tea Making",
+        "condition": "Background OOD"
+      },
+      {
+        "task": "USB Insertion",
+        "condition": "ID"
+      },
+      {
+        "task": "USB Insertion",
+        "condition": "Object OOD"
+      }
+    ],
+    "models": {
+      "OpenWAM-α": [
+        [
+          50,
+          66.7
+        ],
+        [
+          50,
+          63.3
+        ],
+        [
+          25,
+          33.3
+        ],
+        [
+          10,
+          25
+        ],
+        [
+          35,
+          70
+        ],
+        [
+          10,
+          51.7
+        ],
+        [
+          65.0,
+          75.0
+        ],
+        [
+          25.0,
+          50.0
+        ],
+        [
+          60,
+          83.33333333333334
+        ],
+        [
+          5,
+          29.166666666666668
+        ],
+        [
+          75,
+          87.5
+        ],
+        [
+          40,
+          70
+        ]
+      ],
+      "π₀.₅": [
+        [
+          50,
+          61.7
+        ],
+        [
+          45,
+          61.7
+        ],
+        [
+          50,
+          56.7
+        ],
+        [
+          45,
+          51.7
+        ],
+        [
+          55,
+          80
+        ],
+        [
+          20,
+          63.3
+        ],
+        [
+          50.0,
+          65.0
+        ],
+        [
+          30.0,
+          53.333333333333336
+        ],
+        [
+          50,
+          83.33333333333334
+        ],
+        [
+          5,
+          56.666666666666664
+        ],
+        [
+          45,
+          72.5
+        ],
+        [
+          35,
+          62.5
+        ]
+      ],
+      "E2EWAM": [
+        [
+          75,
+          81.7
+        ],
+        [
+          60,
+          70
+        ],
+        [
+          70,
+          75
+        ],
+        [
+          60,
+          70
+        ],
+        [
+          70,
+          90
+        ],
+        [
+          45,
+          75
+        ],
+        [
+          85.0,
+          90.0
+        ],
+        [
+          45.0,
+          63.333333333333336
+        ],
+        [
+          60,
+          90.83333333333333
+        ],
+        [
+          15,
+          61.66666666666667
+        ],
+        [
+          80,
+          90
+        ],
+        [
+          55,
+          77.5
+        ]
+      ]
+    }
+  },
+  "real_robot_provenance": {
+    "source": "scripts/real-robot-results-20261111.json",
+    "revision": "2026-11-11",
+    "aggregation": "OOD Clothes Folding averages its three conditions before the five-capability macro average. Other capabilities have one OOD condition each.",
+    "precision": "Fruit-tea/ring PS calculated from trial scores before display rounding. Other PS values inherit published rounding.",
+    "revisions": {
+      "fruit_tea": "User supplied 20 trial scores per method and condition; six-stage rubric.",
+      "ring": "output/ring_visual_audit_20261111/trial_scores.csv; 20 trials per method and condition; user-approved visual audit.",
+      "other_tasks": "Existing published SR/PS values retained, including their original rounding.",
+      "precision": "Fruit-tea/ring PS calculated from trial scores before display rounding. Other PS values inherit published rounding."
+    },
+    "uncertainty": "No error bars: trial counts and policy-seed uncertainty are not supplied in the draft."
+  },
+  "colors": {
+    "baseline": "#B8BEC5",
+    "E2EWAM": "#5267CE",
+    "outline": "#4055B5"
+  },
+  "own_noncolor_encoding": "Simulation only: dark bar outline and bold method/value labels.",
+  "real_robot_colors": {
+    "E2EWAM": "#5267CE",
+    "OpenWAM-α": "#879096",
+    "π₀.₅": "#AFB5BA"
+  },
+  "real_robot_presentation": "Two grouped vertical charts, each with five task clusters. Fixed left-to-right order in every cluster: E2EWAM, OpenWAM-α, π₀.₅. A shared iris-blue accent for E2EWAM and neutral-gray baselines; equal bar outlines and value text. Shared model legend is supplied by the webpage. Web SVGs omit visible titles and provenance but retain aggregation and all values in an accessible description.",
+  "palette_note": "White figure backgrounds; E2EWAM uses the shared website accent #5267CE in both simulation and real-robot figures. Baselines use neutral grays.",
+  "notes": [
+    "No overall average across the four simulation metrics.",
+    "RoboTwin own arithmetic mean is 69.92 after the 2026-11-09 user update; it is not displayed.",
+    "SVG text remains editable; Python and this JSON preserve the numerical source."
+  ]
+}

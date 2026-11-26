@@ -1,0 +1,20 @@
+.results-content>.ir-root{color:var(--ink);font-family:var(--font-sans,Inter,Arial,sans-serif);margin:clamp(64px,9vw,125px) 0 0;padding-top:clamp(38px,5vw,66px);border-top:1px solid var(--line)}
+.ir-root *,.ir-tooltip *{box-sizing:border-box}
+.ir-rollout-link{display:inline-flex;align-items:center;min-height:42px;margin-top:8px;font-size:1rem;line-height:1.5;color:var(--accent);text-decoration:none;white-space:nowrap}
+.ir-rollout-link:hover{text-decoration:underline;text-underline-offset:4px}
+.ir-paper-scroll{margin:clamp(26px,4vw,50px) 0 0;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:var(--plot-axis) transparent}
+.ir-paper-chart{position:relative;width:100%;min-width:46rem}
+.ir-paper-chart svg{display:block;width:100%;height:auto}
+.ir-paper-bar{position:absolute;display:block;padding:0;border:0;background:transparent;cursor:pointer}
+.ir-paper-bar:is(:hover,:focus-visible){outline:1.5px solid var(--ink);outline-offset:1px}
+.ir-rollout-link:focus-visible,.ir-paper-scroll:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.ir-tooltip{position:fixed;z-index:90;width:max-content;max-width:min(330px,calc(100vw - 16px));padding:12px 14px;border:1px solid #d6dae1;border-radius:4px;background:#fff;color:#17191d;font-family:var(--font-sans,Inter,Arial,sans-serif);font-size:.8125rem;line-height:1.45;pointer-events:auto}
+.ir-tooltip[hidden]{display:none}.ir-tooltip-task{display:block;font-size:.875rem;font-weight:650}.ir-tooltip-model{margin:2px 0 6px;color:#535b64}
+.ir-tooltip-conditions{margin:0}.ir-tooltip-conditions>div{display:flex;justify-content:space-between;gap:24px;padding:5px 0}.ir-tooltip-conditions dt,.ir-tooltip-conditions dd{margin:0}.ir-tooltip-conditions dd{font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.ir-tooltip-mean{border-top:1px solid var(--line);margin:9px 0 0;padding-top:9px;color:var(--muted);font-size:11px}.ir-error{font-size:14px;color:var(--muted)}
+@media(prefers-reduced-motion:reduce){.ir-root *{transition:none!important}}
+
+/* Show model metadata without a filled card around the chart. */
+.ir-tooltip-conditions>div{gap:14px;padding:3px 0}
+.ir-tooltip-conditions + .ir-tooltip-conditions:not(:empty){border-top:1px solid var(--line);margin-top:6px;padding-top:6px}
+.bar:focus-visible .bar-body{outline:2px solid var(--ink);outline-offset:3px}

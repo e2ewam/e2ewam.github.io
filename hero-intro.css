@@ -1,0 +1,31 @@
+/* E2EWAM unfolds into its full name, then becomes part of the paper title. */
+.hero-intro{display:none}
+.intro-pending .hero-intro{display:block;position:fixed;inset:0;z-index:60;pointer-events:none;color:var(--ink)}
+.hero-intro-curtain{position:absolute;inset:0;background:var(--paper)}
+.hero-intro::after,.intro-acronym{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:max-content;white-space:nowrap;font-size:clamp(44px,7vw,90px);font-weight:500;line-height:1.14;letter-spacing:normal;font-optical-sizing:none;font-kerning:none}
+.hero-intro::after{content:'E2EWAM'}
+.hero-intro.intro-lettered::after{display:none}
+.intro-acronym span{display:inline-block;transform-origin:0 0;will-change:transform,opacity}
+.intro-lockup{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:12px;width:max-content;max-width:calc(100% - 40px);font-size:clamp(27px,5vw,68px);font-weight:500;line-height:1.14;letter-spacing:normal}
+.intro-pending .intro-lockup{visibility:hidden}
+.intro-lettered .intro-lockup{visibility:visible}
+.intro-word{display:block;position:relative;white-space:nowrap;transform-origin:0 0;font-optical-sizing:none}
+.intro-slicing .intro-composed{visibility:hidden}
+.intro-fragment{position:absolute;inset:0;opacity:0}
+/* The words move from the paper curtain onto the darker video title. */
+.hero-intro>.intro-word{animation:intro-title-ink 1.2s step-end forwards}
+@keyframes intro-title-ink{to{color:var(--paper);text-shadow:var(--video-text-shadow)}}
+.intro-plural{position:absolute;left:100%;top:0;opacity:0;font-optical-sizing:auto}
+.intro-pending #project-title{visibility:hidden}
+.intro-pending .nav,.intro-pending .hero-content>:not(h1),.intro-pending .hero-bottom{opacity:0}
+.intro-running #project-title{visibility:visible}
+.intro-running .title-anchor,.intro-running .title-copy,.intro-running .title-plural{opacity:0}
+.hero h1 .title-anchor{display:inline-block;font-optical-sizing:none}
+/* Keep the destination phrase intact without clipping on narrow phones. */
+@media(max-width:420px){.hero h1{font-size:clamp(27px,8.2vw,34px)}}
+@media(max-width:360px){.intro-lockup{font-size:25px;gap:10px}}
+@media(prefers-reduced-motion:reduce){
+  .intro-pending .hero-intro{display:none}
+  .intro-pending #project-title{visibility:visible}
+  .intro-pending .nav,.intro-pending .hero-content>:not(h1),.intro-pending .hero-bottom,.intro-running .title-anchor,.intro-running .title-copy,.intro-running .title-plural{opacity:1}
+}

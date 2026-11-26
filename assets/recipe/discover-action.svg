@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="164" viewBox="0 0 400 164" role="img" aria-labelledby="title desc" font-family="Arial, Helvetica, sans-serif">
+<title id="title">Action supervision</title>
+<desc id="desc">The action loss supervises the encoder and predictor.</desc>
+<defs><marker id="arrow-17191D" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="5" markerHeight="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#17191D"/></marker><marker id="arrow-A5643E" viewBox="0 0 10 8" refX="9" refY="4" markerWidth="5" markerHeight="4" orient="auto"><path d="M0 0L10 4L0 8Z" fill="#A5643E"/></marker></defs>
+<rect x="19" y="21" width="137" height="43" rx="5" fill="white" stroke="#89939E" stroke-width="1.8"/>
+<text x="87.5" y="49" text-anchor="middle" font-size="20" font-weight="normal" fill="#17191D">Encoder</text>
+<rect x="242" y="21" width="137" height="43" rx="5" fill="white" stroke="#245E9A" stroke-width="1.8"/>
+<text x="310.5" y="49" text-anchor="middle" font-size="20" font-weight="normal" fill="#17191D">Predictor</text>
+<path d="M158 42 H239" fill="none" stroke="#17191D" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-17191D)"/>
+<rect x="115" y="104" width="170" height="43" rx="5" fill="white" stroke="#A5643E" stroke-width="1.8"/>
+<text x="200" y="132" text-anchor="middle" font-size="20" font-weight="normal" fill="#A5643E">Action expert</text>
+<path d="M145 103 V81 H88 V68" fill="none" stroke="#A5643E" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5 5" marker-end="url(#arrow-A5643E)"/>
+<path d="M255 103 V81 H310 V68" fill="none" stroke="#A5643E" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5 5" marker-end="url(#arrow-A5643E)"/>
+</svg>
