@@ -98,6 +98,8 @@
     video.poster = task.poster;
     video.preload = 'metadata';
     video.loop = true;
+    video.defaultPlaybackRate = 1.25;
+    video.playbackRate = video.defaultPlaybackRate;
     video.muted = true;
     video.defaultMuted = true;
     video.playsInline = true;
