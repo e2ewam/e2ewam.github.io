@@ -14,6 +14,9 @@
   const paused = () => userPaused ?? reduced.matches;
   const running = () => !paused() && !suspended && !document.hidden && visible;
   const stages = [];
+  const startupLimit = 1600;
+  let awaitingFirstPlayback = true;
+  let startupTimer = null;
   const eligible = s => running() && s.visible;
   const needsPlay = () => {
     const shown = stages.filter(s => s.visible);
@@ -26,7 +29,7 @@
     toggle.setAttribute('aria-pressed', String(stopped));
   }
   function showFrame(s) {
-    if (s.video.readyState >= 2 && !s.video.seeking) s.tile.classList.add('has-frame');
+    if (!awaitingFirstPlayback && s.video.readyState >= 2 && !s.video.seeking) s.tile.classList.add('has-frame');
   }
   function stop(s) {
     // Invalidate callbacks before pause() rejects an outstanding play promise.
@@ -36,11 +39,29 @@
     s.video.pause();
     s.stalledFor = 0;
   }
+  function clearStartupTimer() {
+    if (startupTimer !== null) clearTimeout(startupTimer);
+    startupTimer = null;
+  }
+  function finishStartup() {
+    clearStartupTimer();
+    if (!running()) return;
+    awaitingFirstPlayback = false;
+    stages.forEach(play);
+  }
+  function checkStartupReadiness() {
+    if (!awaitingFirstPlayback || !running()) return;
+    const visiblePlayers = stages.filter(s => eligible(s) && !s.failed);
+    if (!visiblePlayers.length) return;
+    if (visiblePlayers.every(s => s.video.readyState >= 2)) finishStartup();
+    else if (startupTimer === null) startupTimer = setTimeout(finishStartup, startupLimit);
+  }
   function play(s) {
     if (!eligible(s) || s.failed || s.blocked || s.pending || !s.video.paused) return;
+    if (!s.video.getAttribute('src')) s.video.src = s.task.heroVideo ?? s.task.video;
+    if (awaitingFirstPlayback) return;
     s.video.muted = true;
     s.video.autoplay = true;
-    if (!s.video.getAttribute('src')) s.video.src = s.task.video;
     const request = ++s.generation;
     s.pending = request;
     s.video.play().then(() => {
@@ -83,6 +104,8 @@
       if (eligible(s)) play(s);
       else stop(s);
     });
+    if (running()) checkStartupReadiness();
+    else clearStartupTimer();
     updateButton();
   }
 
@@ -98,7 +121,7 @@
     video.poster = task.poster;
     video.preload = 'metadata';
     video.loop = true;
-    video.defaultPlaybackRate = 1.25;
+    video.defaultPlaybackRate = 1.4;
     video.playbackRate = video.defaultPlaybackRate;
     video.muted = true;
     video.defaultMuted = true;
@@ -108,7 +131,7 @@
     video.setAttribute('playsinline', '');
     video.setAttribute('webkit-playsinline', '');
     video.setAttribute('aria-hidden', 'true');
-    video.dataset.source = task.video;
+    video.dataset.source = task.heroVideo ?? task.video;
     const s = {task, slot, tile, video, visible:true, failed:false, blocked:false,
       retries:0, generation:0, pending:null, lastTime:0, stalledFor:0, readyRetried:false};
     video.addEventListener('playing', () => {
@@ -119,12 +142,16 @@
       if (!video.paused && video.currentTime > 0) { s.blocked = false; updateButton(); }
       showFrame(s);
     });
-    video.addEventListener('loadeddata', () => showFrame(s));
+    video.addEventListener('loadeddata', () => {
+      checkStartupReadiness();
+      showFrame(s);
+    });
     video.addEventListener('seeked', () => showFrame(s));
     video.addEventListener('canplay', () => {
       // One retry once metadata and layout are ready; never policy-poll forever.
       retryWhenReady(s);
       play(s);
+      checkStartupReadiness();
     });
     video.addEventListener('error', () => {
       if (eligible(s) && !s.failed && !s.blocked) retry(s);
@@ -137,7 +164,11 @@
 
   toggle.addEventListener('click', () => {
     userPaused = !needsPlay();
-    if (!userPaused) stages.forEach(s => { s.failed = false; s.retries = 0; });
+    if (!userPaused) {
+      clearStartupTimer();
+      awaitingFirstPlayback = false;
+      stages.forEach(s => { s.failed = false; s.retries = 0; });
+    }
     // play() must run in the click stack to retain browser user activation.
     sync(!userPaused);
   });

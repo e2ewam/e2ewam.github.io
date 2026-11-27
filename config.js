@@ -71,6 +71,7 @@ window.PROJECT = {
       "treatment": "brightened",
       "view": "top",
       "video": "media/curated_eval_videos_20261020/cloth/lwm/sceneOOD/success__11of20__brightened/top.mp4",
+      "heroVideo": "media/hero/cloth-sceneOOD.mp4",
       "poster": "assets/cloth-sceneOOD.jpg"
     },
     {
@@ -85,6 +86,7 @@ window.PROJECT = {
       "treatment": "brightened",
       "view": "top",
       "video": "media/curated_eval_videos_20261020/fridge/lwm/indomain/success__02of20__brightened/top.mp4",
+      "heroVideo": "media/hero/fridge-indomain.mp4",
       "poster": "assets/fridge-indomain.jpg"
     },
     {
@@ -99,6 +101,7 @@ window.PROJECT = {
       "treatment": "brightened",
       "view": "top",
       "video": "media/curated_eval_videos_20261020/fridge/lwm/textureOOD/success__04of20__brightened/top.mp4",
+      "heroVideo": "media/hero/fridge-textureOOD.mp4",
       "poster": "assets/fridge-textureOOD.jpg"
     },
     {
@@ -113,6 +116,7 @@ window.PROJECT = {
       "treatment": "original",
       "view": "top",
       "video": "media/curated_eval_videos_20261020/cloth/lwm/backgroundobjOOD/success__18of20__original/top.mp4",
+      "heroVideo": "media/hero/cloth-backgroundobjOOD.mp4",
       "poster": "assets/cloth-backgroundobjOOD.jpg",
       "displayTreatment": "whiteboard-highlights"
     },
@@ -128,6 +132,7 @@ window.PROJECT = {
       "treatment": "brightened",
       "view": "top",
       "video": "media/curated_eval_videos_20261020/usbcharger/lwm/indomain/success__01of20__brightened/top.mp4",
+      "heroVideo": "media/hero/usbcharger-indomain.mp4",
       "poster": "assets/usbcharger-indomain.jpg"
     },
     {
@@ -142,6 +147,7 @@ window.PROJECT = {
       "treatment": "brightened",
       "view": "top",
       "video": "media/curated_eval_videos_20261020/usbcharger/lwm/objectOOD/fail__01of20__brightened/top.mp4",
+      "heroVideo": "media/hero/usbcharger-objectOOD.mp4",
       "poster": "assets/rollouts/usbcharger-objectood-lwm-success.jpg"
     },
     {
@@ -156,6 +162,7 @@ window.PROJECT = {
       "treatment": "brightened",
       "view": "top",
       "video": "media/curated_eval_videos_20261020/ring/lwm/indomain/success__01of20__brightened/top.mp4",
+      "heroVideo": "media/hero/ring-indomain.mp4",
       "poster": "assets/ring-indomain.jpg"
     },
     {
@@ -170,6 +177,7 @@ window.PROJECT = {
       "treatment": "brightened",
       "view": "top",
       "video": "media/curated_eval_videos_20261020/ring/lwm/velOOD/success__03of20__brightened/top.mp4",
+      "heroVideo": "media/hero/ring-velOOD.mp4",
       "poster": "assets/ring-velOOD.jpg"
     },
     {
@@ -184,6 +192,7 @@ window.PROJECT = {
       "treatment": "brightened",
       "view": "top",
       "video": "media/curated_eval_videos_20261020/usbcharger/pi05/indomain/success__21of30__brightened/top.mp4",
+      "heroVideo": "media/hero/pi05-usbcharger-indomain.mp4",
       "poster": "assets/rollouts/usbcharger-indomain-pi05-success.jpg"
     },
     {
@@ -198,6 +207,7 @@ window.PROJECT = {
       "treatment": "brightened",
       "view": "top",
       "video": "media/curated_eval_videos_20261020/identifytable/lwm/indomain/success__01of20__brightened/top.mp4",
+      "heroVideo": "media/hero/identifytable-indomain.mp4",
       "poster": "assets/identifytable-indomain.jpg"
     },
     {
@@ -212,6 +222,7 @@ window.PROJECT = {
       "treatment": "brightened",
       "view": "top",
       "video": "media/curated_eval_videos_20261020/identifytable/lwm/objectOOD/success__19of20__brightened/top.mp4",
+      "heroVideo": "media/hero/identifytable-objectOOD.mp4",
       "poster": "assets/identifytable-objectOOD.jpg"
     },
     {
@@ -226,6 +237,7 @@ window.PROJECT = {
       "treatment": "brightened",
       "view": "top",
       "video": "media/curated_eval_videos_20261020/ring/pi05/velOOD/success__02of20__brightened/top.mp4",
+      "heroVideo": "media/hero/pi05-ring-velOOD.mp4",
       "poster": "assets/rollouts/ring-velood-pi05-success.jpg"
     }
   ],
