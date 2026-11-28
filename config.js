@@ -59,8 +59,8 @@ window.PROJECT = {
     }
   ],
   "hero": {
-    "video": "media/hero/long-horizon-faucet.mp4?v=highlights",
-    "poster": "media/hero/long-horizon-faucet.jpg?v=highlights"
+    "video": "media/hero/long-horizon-faucet.mp4?v=highlight-detail",
+    "poster": "media/hero/long-horizon-faucet.jpg?v=highlight-detail"
   },
   "tasks": [
     {
