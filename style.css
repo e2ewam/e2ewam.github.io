@@ -66,3 +66,10 @@
 @media(max-width:800px){.video-slot,.video-tile{max-height:200px}.hero h1{letter-spacing:normal}}
 @media(max-width:360px){.hero-content{padding-inline:20px}.hero h1{font-size:30px}}
 @media(prefers-reduced-motion:reduce){.video-tile video{transition:none!important}}
+
+/* Keep the full-bleed footage behind the existing title and motion control. */
+.video-wall.video-wall--single{display:block;inset:0;max-width:none}
+.video-wall--single .video-slot,.video-wall--single .video-tile{height:100%;max-height:none}
+.video-wall--single .video-tile{background-size:cover}
+.video-wall--single .video-tile video{max-height:none;object-fit:cover}
+.video-wall--single+.hero-shade{display:block;position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgb(10 20 30 / .43),rgb(10 20 30 / .56) 34%,rgb(10 20 30 / .61) 67%,rgb(10 20 30 / .45))}

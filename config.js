@@ -58,6 +58,10 @@ window.PROJECT = {
       "url": null
     }
   ],
+  "hero": {
+    "video": "media/hero/long-horizon-faucet.mp4",
+    "poster": "media/hero/long-horizon-faucet.jpg"
+  },
   "tasks": [
     {
       "id": "cloth-sceneOOD",

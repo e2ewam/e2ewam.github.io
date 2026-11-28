@@ -1,9 +1,11 @@
-/* Fixed video wall: independent, muted players with lifecycle-safe recovery. */
+/* Muted hero players with lifecycle-safe recovery. */
 (() => {
   'use strict';
   const hero = document.querySelector('.hero');
   if (!hero) return;
   const wall = hero.querySelector('.video-wall');
+  const featuredClip = wall.classList.contains('video-wall--single') ? window.PROJECT.hero : null;
+  const clips = featuredClip ? [featuredClip] : window.PROJECT.tasks;
   const toggle = document.getElementById('motion-toggle');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   // Browser rejection is not a user pause. Keep those states separate.
@@ -109,7 +111,7 @@
     updateButton();
   }
 
-  window.PROJECT.tasks.forEach(task => {
+  clips.forEach(task => {
     const slot = document.createElement('div');
     slot.className = 'video-slot';
     const tile = document.createElement('div');
@@ -121,7 +123,7 @@
     video.poster = task.poster;
     video.preload = 'metadata';
     video.loop = true;
-    video.defaultPlaybackRate = 1.4;
+    video.defaultPlaybackRate = featuredClip ? 1 : 1.4;
     video.playbackRate = video.defaultPlaybackRate;
     video.muted = true;
     video.defaultMuted = true;
