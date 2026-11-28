@@ -1,0 +1,57 @@
+.visual-objectives {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
+  gap: clamp(12px, 2vw, 22px);
+}
+
+.visual-objective {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 13px;
+  min-width: 0;
+  margin: 0;
+  padding: clamp(14px, 1.85vw, 22px);
+  border: 1px solid #e2e8ec;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.visual-objective > figcaption {
+  display: grid;
+  align-content: start;
+  gap: 3px;
+}
+
+.visual-objective__heading {
+  color: var(--recipe-ink, #273340);
+  font-size: clamp(1rem, 1.72vw, 1.22rem);
+  font-weight: 640;
+  line-height: 1.22;
+}
+
+.visual-objective__description {
+  color: var(--recipe-muted, #536270);
+  font-size: .82rem;
+  font-weight: 430;
+  line-height: 1.4;
+  text-wrap: pretty;
+}
+
+#study .visual-objective__diagram {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 760px) {
+  .visual-objectives {
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-rows: auto;
+  }
+}
+
+@media (max-width: 390px) {
+  .visual-objective { padding-inline: 10px; }
+  .visual-objective > figcaption { padding-inline: 3px; }
+}

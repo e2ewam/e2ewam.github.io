@@ -8,6 +8,7 @@
   const details = section.querySelector('.recipe-hover-detail');
   const close = section.querySelector('[data-recipe-close]');
   if (!details || !close) return;
+  const overview = section.querySelector('#recipe-overview');
 
   const entries = new Map();
   for (const button of section.querySelectorAll('[data-recipe-open]')) {
@@ -27,12 +28,16 @@
 
     activeId = id;
     details.hidden = false;
+    if (overview) overview.dataset.focus = id;
     for (const [entryId, entry] of entries) {
       const selected = entryId === id;
       entry.panel.hidden = !selected;
       entry.button.setAttribute('aria-expanded', String(selected));
     }
-    if (focus) next.panel.focus();
+    if (focus) {
+      next.panel.focus({ preventScroll: true });
+      details.scrollIntoView({ block: 'start' });
+    }
   }
 
   function closeStudy() {
@@ -45,7 +50,8 @@
     entry.panel.hidden = true;
     entry.button.setAttribute('aria-expanded', 'false');
     details.hidden = true;
-    entry.button.focus({ preventScroll: true });
+    if (overview) delete overview.dataset.focus;
+    entry.button.focus();
 
     if (entries.has(location.hash.slice(1))) {
       history.replaceState(null, '', `${location.pathname}${location.search}#study`);
@@ -59,14 +65,14 @@
       hoverTimer = setTimeout(() => openStudy(id), 180);
     });
     button.addEventListener('mouseleave', () => clearTimeout(hoverTimer));
-    button.addEventListener('click', event => {
+    button.addEventListener('click', () => {
       clearTimeout(hoverTimer);
       if (activeId === id && pinned) {
         closeStudy();
         return;
       }
       pinned = true;
-      openStudy(id, event.detail === 0);
+      openStudy(id, true);
       if (entries.has(location.hash.slice(1))) {
         history.replaceState(null, '', `${location.pathname}${location.search}#${id}`);
       }

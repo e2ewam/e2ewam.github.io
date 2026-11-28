@@ -1,0 +1,42 @@
+/* The comparison charts reuse the encoder panels, axes and series in paper-figures.css. */
+#study .recipe-preview-chart { max-width: 1060px; }
+#study .recipe-results-pair {
+  width: min(100%, 920px);
+  margin-inline: auto;
+  align-items: start;
+}
+#study .recipe-result-label {
+  fill: #193347;
+  font-size: 11px;
+  font-weight: 550;
+  text-anchor: middle;
+}
+#study .series-ours .recipe-result-label {
+  fill: var(--result-ours-strong);
+  font-weight: 650;
+}
+#study .recipe-result-group-label {
+  fill: var(--muted);
+  font-size: 10.5px;
+  font-weight: 550;
+  text-anchor: middle;
+}
+#study :is(.recipe-result-group-line, .recipe-result-divider) {
+  fill: none;
+  stroke: #aab7bb;
+  stroke-width: .75;
+}
+#study .recipe-result-divider { stroke-dasharray: 3 3; }
+#study .recipe-result-break {
+  fill: none;
+  stroke: #193347;
+  stroke-width: 1.15;
+}
+#study .recipe-preview-chart .recipe-choice-note strong { color: var(--result-ours-strong); }
+
+@media (max-width: 800px) {
+  #study .recipe-result-figure svg {
+    max-width: 425px;
+    max-height: none;
+  }
+}

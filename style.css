@@ -72,8 +72,22 @@
 .video-wall--single .video-slot,.video-wall--single .video-tile{height:100%;max-height:none}
 .video-wall--single .video-tile{background-size:cover}
 .video-wall--single .video-tile video{max-height:none;object-fit:cover}
-.video-wall--single+.hero-shade{display:block;position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgb(10 20 30 / .39),rgb(10 20 30 / .47) 34%,rgb(10 20 30 / .52) 67%,rgb(10 20 30 / .39))}
+.video-wall--single + .hero-shade {
+  display: block;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 66% 42% at 50% 49%,
+      rgb(10 20 30 / .38), rgb(10 20 30 / .31) 45%, rgb(10 20 30 / .13) 72%, transparent),
+    linear-gradient(180deg, rgb(10 20 30 / .22), transparent 18%,
+      transparent 78%, rgb(10 20 30 / .27));
+}
 
 @media(max-aspect-ratio:9/10){
   .video-wall.video-wall--single{inset:50% 0 auto;height:min(76%,98vw);transform:translateY(-50%);mask-image:linear-gradient(180deg,transparent,#000 12%,#000 88%,transparent)}
+  .video-wall--single + .hero-shade {
+    background: radial-gradient(ellipse 96% 35% at 50% 49%,
+      rgb(10 20 30 / .37), rgb(10 20 30 / .31) 44%, rgb(10 20 30 / .13) 72%, transparent);
+  }
 }

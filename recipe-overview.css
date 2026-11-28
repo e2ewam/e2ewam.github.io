@@ -1,0 +1,91 @@
+#study .recipe-overview {
+  margin: 0 0 clamp(16px, 2.3vw, 32px);
+  padding: clamp(10px, 2.3vw, 28px);
+  border: 1px solid #e0e6e9;
+  border-radius: 12px;
+  background: #fff;
+}
+
+#study .recipe-overview svg {
+  width: 100%;
+  height: auto;
+  max-width: 980px;
+  margin-inline: auto;
+  overflow: visible;
+  font-family: var(--font-sans);
+}
+
+#study .recipe-overview-desktop { display: block; }
+#study .recipe-overview-mobile { display: none; }
+
+.recipe-overview .overview-neutral { --node-fill: #f4f6f7; --node-stroke: #aebbc1; --wire: #82939b; }
+.recipe-overview .overview-blue { --node-fill: #edf3f6; --node-stroke: #99b1bf; --wire: #7797a9; }
+.recipe-overview .overview-rust { --node-fill: #f7efe9; --node-stroke: #c69b80; --wire: #a77760; }
+
+.recipe-overview .overview-node {
+  fill: var(--focus-fill, var(--node-fill));
+  stroke: var(--focus-stroke, var(--node-stroke));
+  stroke-width: var(--focus-width, 1.3);
+}
+.recipe-overview .overview-wire {
+  fill: none;
+  stroke: var(--focus-stroke, var(--wire));
+  stroke-width: var(--focus-width, 1.5);
+}
+.recipe-overview .overview-arrowhead { fill: #6e838f; }
+
+.recipe-overview .overview-node-label,
+.recipe-overview .overview-latent-label,
+.recipe-overview .overview-label {
+  text-anchor: middle;
+  fill: #21333f;
+}
+
+.recipe-overview .overview-node-label {
+  dominant-baseline: central;
+  font-size: 18px;
+  font-weight: 620;
+}
+
+.recipe-overview .overview-label {
+  fill: #485a65;
+  font-size: 14.5px;
+  font-weight: 515;
+}
+
+.recipe-overview .overview-latent-label {
+  dominant-baseline: central;
+  fill: var(--focus-stroke, #21333f);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 23px;
+  font-style: italic;
+}
+
+@media (max-width: 670px) {
+  #study .recipe-overview-desktop { display: none; }
+  #study .recipe-overview-mobile { display: block; max-width: 354px; }
+  .recipe-overview .overview-node-label { font-size: 15px; }
+  .recipe-overview .overview-latent-label { font-size: 21px; }
+  .recipe-overview .overview-label { font-size: 13px; }
+}
+
+#study .recipe-overview[data-focus] [data-recipe-focus] { opacity: .3; }
+
+#study .recipe-overview[data-focus="study-action"] [data-recipe-focus~="study-action"],
+#study .recipe-overview[data-focus="study-targets"] [data-recipe-focus~="study-targets"],
+#study .recipe-overview[data-focus="study-collapse"] [data-recipe-focus~="study-collapse"],
+#study .recipe-overview[data-focus="study-dynamics"] [data-recipe-focus~="study-dynamics"] {
+  --focus-fill: #dfedf5;
+  --focus-stroke: #416b85;
+  --focus-width: 1.9;
+  opacity: 1;
+}
+
+#study .recipe-overview[data-focus="study-action"] .overview-rust[data-recipe-focus~="study-action"] {
+  --focus-fill: #f4e1d4;
+  --focus-stroke: #a45b39;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #study .recipe-overview [data-recipe-focus] { transition: opacity .2s ease; }
+}

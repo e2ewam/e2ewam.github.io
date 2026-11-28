@@ -66,6 +66,10 @@
   fill: var(--story-ink);
 }
 .story-layout #study .story-gaussian-family { border-inline-start: 1px solid var(--story-line); }
+.story-layout #study .story-gaussian-family .story-replay { margin: 8px auto 0; }
+@media (prefers-reduced-motion: reduce) {
+  .story-layout #study .story-gaussian-family .story-replay { display: none; }
+}
 .story-layout #study .story-regularizer .recipe-equation {
   margin: 7px 0 5px;
   padding: 3px 0 4px;

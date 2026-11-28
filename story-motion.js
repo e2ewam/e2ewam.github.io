@@ -2,6 +2,7 @@
   'use strict';
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
   const mediaByTarget = new Map();
+  const svgByTarget = new Map();
   const supportsObserver = 'IntersectionObserver' in window;
 
   function play(clip) {
@@ -18,8 +19,15 @@
       else clip.pause();
     }
     if (target.hasAttribute('data-story-sequence')) {
+      const animation = svgByTarget.get(target);
+      const svg = animation?.ownerSVGElement;
       target.classList.toggle('is-paused', !inView);
-      if (inView && !clip) target.classList.add('is-playing');
+      if (inView) svg?.unpauseAnimations?.();
+      else svg?.pauseAnimations?.();
+      if (inView && !clip && !target.classList.contains('is-playing')) {
+        target.classList.add('is-playing');
+        animation?.beginElement?.();
+      }
     }
   }
 
@@ -33,6 +41,10 @@
     const sequences = [...group.querySelectorAll('[data-story-sequence]')];
     const clips = [...group.querySelectorAll('video[data-src]')];
     const targets = [...sequences];
+    for (const sequence of sequences) {
+      const animation = sequence.querySelector('[data-story-svg-animation]');
+      if (animation) svgByTarget.set(sequence, animation);
+    }
     for (const clip of clips) {
       const sequence = clip.closest('[data-story-sequence]');
       mediaByTarget.set(sequence || clip, clip);
@@ -72,7 +84,15 @@
     });
   }
   motion.addEventListener('change', () => {
-    if (motion.matches) mediaByTarget.forEach(clip => clip.pause());
+    if (motion.matches) {
+      mediaByTarget.forEach(clip => clip.pause());
+      svgByTarget.forEach(animation => animation.ownerSVGElement?.pauseAnimations?.());
+    } else {
+      for (const target of svgByTarget.keys()) {
+        motionInView?.unobserve(target);
+        motionInView?.observe(target);
+      }
+    }
   });
 
   const scale = document.getElementById('scaled-evaluation');
