@@ -72,4 +72,8 @@
 .video-wall--single .video-slot,.video-wall--single .video-tile{height:100%;max-height:none}
 .video-wall--single .video-tile{background-size:cover}
 .video-wall--single .video-tile video{max-height:none;object-fit:cover}
-.video-wall--single+.hero-shade{display:block;position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgb(10 20 30 / .42),rgb(10 20 30 / .52) 34%,rgb(10 20 30 / .57) 67%,rgb(10 20 30 / .44))}
+.video-wall--single+.hero-shade{display:block;position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgb(10 20 30 / .39),rgb(10 20 30 / .47) 34%,rgb(10 20 30 / .52) 67%,rgb(10 20 30 / .39))}
+
+@media(max-aspect-ratio:9/10){
+  .video-wall.video-wall--single{inset:50% 0 auto;height:min(76%,98vw);transform:translateY(-50%);mask-image:linear-gradient(180deg,transparent,#000 12%,#000 88%,transparent)}
+}
